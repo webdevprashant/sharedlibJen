@@ -12,7 +12,8 @@ def build()  {
 def test()  {
     // echo "INFO: ${message}"
     node {
-        sh 'curl --silent http://192.168.143.54:1222/java-web-app/'
+        // sh 'curl --silent http://192.168.143.54:1222/java-web-app/'
+	echo "KW"
     }
     
 }
