@@ -25,10 +25,10 @@ def push()  {
       def dockerHubUsername = "webdevprashant"
       def dockerHubPassword = "Dockeristhegreattool@1"
 
-      withDockerRegistry(credentialsId: "docker-hub-credentials", url: "https://index.docker.io/v1/") {
-          sh "docker build -t ${dockerImage} ."
-          sh "docker login -u ${dockerHubUsername} -p ${dockerHubPassword}"
-          sh "docker push ${dockerImage}"
-      }
+      //withDockerRegistry(credentialsId: "docker-hub-credentials", url: "https://index.docker.io/v1/") {
+         //sh "docker build -t ${dockerImage} ."
+         sh "docker login -u ${dockerHubUsername} -p ${dockerHubPassword}"
+         sh "docker push ${dockerImage}"
+      //}
     }
 }
