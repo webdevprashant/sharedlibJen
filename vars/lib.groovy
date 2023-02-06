@@ -22,7 +22,7 @@ def push()  {
     node {
       def dockerImage = "webdevprashant/javaapp:${BUILD_NUMBER}"
       def dockerHubUsername = "webdevprashant"
-      def dockerHubPassword = ${DOCKER_HUB_PASS}
+      def dockerHubPassword = "Dockeristhegreattool@1"
 
       withDockerRegistry(credentialsId: "docker-hub-credentials", url: "https://index.docker.io/v1/") {
           sh "docker build -t ${dockerImage} ."
