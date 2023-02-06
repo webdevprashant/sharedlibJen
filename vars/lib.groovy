@@ -27,8 +27,8 @@ def push()  {
 
       //withDockerRegistry(credentialsId: "docker-hub-credentials", url: "https://index.docker.io/v1/") {
          //sh "docker build -t ${dockerImage} ."
-         sh "docker login -u ${dockerHubUsername} -p ${dockerHubPassword}"
-         sh "docker push ${dockerImage}"
+         sh "sudo docker login -u ${dockerHubUsername} -p ${dockerHubPassword}"
+         sh "sudo docker push ${dockerImage}"
       //}
     }
 }
