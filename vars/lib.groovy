@@ -1,7 +1,7 @@
 def build()  {
     // echo "INFO: ${message}"
     node {
-        git url: "https://github.com/webdevprashant/sharedlibJen.git"
+        git url: "https://github.com/webdevprashant/javaapp"
         sh "mvn clean package"
         sh "sudo docker rm -f myjavaapp"
         sh "sudo docker build -t webdevprashant/javaapp:${BUILD_NUMBER} ."
