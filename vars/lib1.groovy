@@ -3,7 +3,7 @@ def build()  {
 	node {
     git url: 'https://github.com/webdevprashant/reactapp.git'
     sh "sudo docker build -t webdevprashant/reactapp:${BUILD_NUMBER} ."
-    sh "docker rm -f myreactapp"
+    sh "sudo docker rm -f myreactapp"
     sh "sudo docker run  -d -p 1224:3000 --name myreactapp webdevprashant/reactapp:${BUILD_NUMBER}" 
 	}
 }
